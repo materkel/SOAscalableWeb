@@ -38,6 +38,7 @@ Returns a Report with all Locations and Items ordered by Location like this:
 ```
 
 supports GET **e.g.**
-**GET:**```
+**GET:**
+```
 curl -i -u wanda:partyhard2000 http://localhost:3003/reports/by-location
 ```

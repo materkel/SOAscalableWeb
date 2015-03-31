@@ -2,7 +2,7 @@
 
 This is my submission for the final challenge of the SOA Workshop in Scalable Web at FH Salzburg.
 
-I used NodeJS with Express for the implementation.  
+I used NodeJS with Express for the implementation.
 For Testing I used [Supertest](https://github.com/visionmedia/supertest) + [Jasmine](https://github.com/jasmine/jasmine)
 
 ## Intro
@@ -22,15 +22,19 @@ Further Requirements can be found
 
 ## Installation and startup
 
-The Services are all in different folders and can be managed seperately via a config file. (e.g. you can change the **ports** there, if you need to).There's also an extra package.json file for each service.  
+The Services are all in different folders and can be managed seperately via a config file. (e.g. you can change the **ports** there, if you need to).There's also an extra package.json file for each service.
 But for your convenience, you can just run **NPM INSTALL** in the main directory, to play around with all services.
 
-start up the services with following commands:  
-*outside of service directory:*  
-e.g. **$node** ./item-tracking/server.js
+start up the services with following commands:
+*outside of service directory:*
+```
+node ./item-tracking/server.js
+```
 
-*inside service directory:*  
-**$npm start**
+*inside service directory:*
+```
+npm start
+```
 
 run tests with **$npm test** or **$jasmine** in the respective service directories.
 
@@ -41,15 +45,16 @@ You can test the services without depending on user authentication. To do so, ch
 ### User-Management:
 runs at Port: 3000, localhost:3000/user
 
-supports GET **e.g.**  
-**GET:**```
+supports GET **e.g.**
+**GET:**
+```
 curl -i -u wanda:partyhard2000 http://localhost:3000/user
 ```
 
-**available user/password combinations:**  
-wanda: partyhard2000  
-paul: thepanther  
-anne: flytothemoon  
+**available user/password combinations:**
+wanda: partyhard2000
+paul: thepanther
+anne: flytothemoon
 
 ### Location-Management:
 runs at Port: 3001, localhost:3001/locations
@@ -64,15 +69,18 @@ a location looks like this:
 }
 ```
 
-supports GET, POST & DELETE **e.g.**  
+supports GET, POST & DELETE **e.g.**
 
-**GET:**```
+**GET:**
+```
 curl -i -u wanda:partyhard2000 http://localhost:3001/locations
 ```
-**POST:**```
+**POST:**
+```
 curl -i -X POST -u wanda:partyhard2000 -H "Content-Type: application/json" -d '{ "name":"TestItem", "address":"TestStreet 3424" }' http://localhost:3001/locations
 ```
-**DELETE:**```
+**DELETE:**
+```
 curl -i -X DELETE -u wanda:partyhard2000 http://localhost:3001/locations/0
 ```
 ### Item-tracking:
@@ -88,14 +96,17 @@ a item looks like this:
 }
 ```
 
-supports GET, POST & DELETE **e.g.**  
-**GET:**```
+supports GET, POST & DELETE **e.g.**
+**GET:**
+```
 curl -i -u wanda:partyhard2000 http://localhost:3002/items
 ```
-**POST:**```
+**POST:**
+```
 curl -i -X POST -u wanda:partyhard2000 -H "Content-Type: application/json" -d '{ "name":"TestItem", "location":0 }' http://localhost:3002/items
 ```
-**DELETE:**```
+**DELETE:**
+```
 curl -i -X DELETE -u wanda:partyhard2000 http://localhost:3002/items/0
 ```
 
@@ -138,7 +149,8 @@ Returns a Report with all Locations and Items ordered by Location like this:
 ]
 ```
 
-supports GET **e.g.**  
-**GET:**```
+supports GET **e.g.**
+**GET:**
+```
 curl -i -u wanda:partyhard2000 http://localhost:3003/reports/by-location
 ```
