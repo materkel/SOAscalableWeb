@@ -1,10 +1,10 @@
 {
-  "name": "item-tracking",
+  "name": "SOA project",
   "version": "1.0.0",
-  "description": "",
+  "description": "package.js and npm modules for all services of the SOA workshop final challenge",
   "main": "server.js",
   "scripts": {},
-  "author": "",
+  "author": "matthias fressdorf",
   "license": "ISC",
   "devDependencies": {
     "jasmine": "^2.2.1",
