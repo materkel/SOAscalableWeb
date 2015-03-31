@@ -40,6 +40,13 @@ npm start
 
 run tests with **$npm test** or **$jasmine** in the respective service directories.
 
+```
+npm test
+```
+```
+jasmine
+```
+
 You can test the services without depending on user authentication. To do so, change the environment in the config.js file of the respective service to **testing**. Keep in mind, that the reports service still can't be tested without starting up the locations and item-tracking services first.
 
 ## Usage:
@@ -48,15 +55,17 @@ You can test the services without depending on user authentication. To do so, ch
 runs at Port: 3000, localhost:3000/user
 
 supports GET **e.g.**
+
 **GET:**
 ```
 curl -i -u wanda:partyhard2000 http://localhost:3000/user
 ```
 
 **available user/password combinations:**
-wanda: partyhard2000
-paul: thepanther
-anne: flytothemoon
+
+wanda: partyhard2000  
+paul: thepanther  
+anne: flytothemoon  
 
 ### Location-Management:
 runs at Port: 3001, localhost:3001/locations
