@@ -1,5 +1,5 @@
 {
-  "name": "SOA project",
+  "name": "SOA-project",
   "version": "1.0.0",
   "description": "package.js and npm modules for all services of the SOA workshop final challenge",
   "main": "server.js",
