@@ -36,6 +36,8 @@ node ./item-tracking/server.js
 npm start
 ```
 
+## Testing
+
 run tests with **$npm test** or **$jasmine** in the respective service directories.
 
 You can test the services without depending on user authentication. To do so, change the environment in the config.js file of the respective service to **testing**. Keep in mind, that the reports service still can't be tested without starting up the locations and item-tracking services first.
